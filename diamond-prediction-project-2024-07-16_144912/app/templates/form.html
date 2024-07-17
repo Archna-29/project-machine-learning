@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .background-fixed {
+
+        background-image: url('https://www.china-diamonds.com/uploads/325352471s.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+      }
+      body{
+        max-width:500px;
+        margin:auto;
+      }
+    </style>
+  </head>
+  <body  class="background-fixed">
+    
+    <h1>
+      Machine Learning based Daimond Price Predictor System
+    </h1>
+    <form method="POST" action="/predict">
+     <table >
+      <tr><td>Carat (0.2-5.0)</td><td><input name="carat" type="text" value="{{carat}}"></td></tr>
+      <tr><td>Cut</td><td><select name="cut">
+        <option value="1">Premium</option>
+        <option value="2">Ideal</option>
+        <option value="3">Good</option>
+        <option value="4">Very Good</option>
+        <option value="5">Fair</option>
+        </select></td></tr>
+      <tr><td>Color</td><td><select name="color">
+        <option value="1">D</option>
+        <option value="2">E</option>
+        <option value="3">F</option>
+        <option value="4">G</option>
+        <option value="5">H</option>
+        <option value="6">I</option>
+        <option value="7">J</option>
+        </select></td></tr>
+      <tr><td>Clarity</td><td><select name="clarity">
+        <option value="1">I1</option>
+        <option value="2">SI2</option>
+        <option value="3">SI1</option>
+        <option value="4">VS2</option>
+        <option value="5">VS1</option>
+        <option value="6">VVS2</option>
+        <option value="7">VVS1</option>
+        <option value="8">IF</option>
+        </select></td></tr>
+      <tr><td>Depth (43-79)</td><td><input name="depth" type="text" value="{{depth}}"></td></tr>
+      <tr><td>Table (43-95)</td><td><input name="table" type="text" value="{{table}}"></td></tr>
+      <tr><td>Length (3.75-10.74)</td><td><input name="x" type="text" value="{{x}}"></td></tr>
+      <tr><td>Width (3.68-58.9)</td><td><input name="y" type="text" value="{{y}}"></td></tr>
+      <tr><td>Height (1-31.8)</td><td><input name="z" type="text" value="{{z}}"></td></tr>
+      
+      <tr><td colspan="2" align="text-align: center;"><button style="background-color: green; color: white;" onclick="colorFn(this)">Predict</button></td></tr>
+     </table>
+      
+      {{result_1}}
+    </form>
+  </body>
+</html>
+
+
+
+
+
